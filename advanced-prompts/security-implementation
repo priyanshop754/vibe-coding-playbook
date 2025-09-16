@@ -1,0 +1,63 @@
+I need to implement [security feature/requirement] in a production system. I need you to think through this with security-first mindset and comprehensive threat modeling.
+
+SYSTEM CONTEXT:
+- Application: [type of application, user base, data handled]
+- Current Security Posture: [existing auth, encryption, monitoring, compliance]
+- Tech Stack: [frameworks, databases, infrastructure, third-party services]
+- Compliance Requirements: [SOC2, GDPR, HIPAA, PCI-DSS, industry-specific]
+- Threat Environment: [internal/external threats, attack vectors you're concerned about]
+
+SECURITY REQUIREMENT:
+[Detailed description of what security capability needs to be implemented and why]
+
+BUSINESS CONTEXT:
+- Risk tolerance: [how security-critical is this system]
+- User experience constraints: [acceptable friction levels]
+- Performance requirements: [latency, throughput constraints]
+- Operational constraints: [team security expertise, budget, timeline]
+
+Please provide a comprehensive security implementation strategy:
+
+1. THREAT MODEL: 
+   - What specific threats does this implementation address?
+   - What attack vectors remain unaddressed?
+   - What are the business/technical impacts if this security measure fails?
+   - What assumptions is this security model making?
+
+2. SECURITY DESIGN:
+   - Defense-in-depth layers and how they interact
+   - Authentication/authorization model
+   - Data protection strategy (at rest, in transit, in use)
+   - Key management and rotation strategy
+   - Session management and timeout policies
+   - Input validation and output encoding approach
+
+3. IMPLEMENTATION APPROACH:
+   - Security libraries/frameworks to use and why (avoid rolling your own crypto)
+   - Configuration management for security settings
+   - Secrets management strategy
+   - Certificate management and renewal
+   - Database security configuration
+   - Network security requirements
+
+4. VALIDATION STRATEGY:
+   - Unit testing approach for security code
+   - Integration testing for auth flows
+   - Security testing tools and techniques
+   - Penetration testing or security review plan
+   - Compliance verification checklist
+
+5. OPERATIONAL SECURITY:
+   - Logging and monitoring for security events
+   - Incident response procedures
+   - Security metrics and alerting
+   - Backup and disaster recovery considerations
+   - Security documentation and team training needs
+
+6. ROLLOUT STRATEGY:
+   - Deployment approach (blue-green, canary, feature flags)
+   - Rollback procedures if security issues are discovered
+   - User communication about security changes
+   - Post-deployment verification steps
+
+Prioritize security effectiveness over convenience, but explain trade-offs clearly.
