@@ -1,0 +1,48 @@
+I need to make a critical architectural decision for [project/system description]. Before proposing any solution, I need you to think through this systematically like a senior architect.
+
+CURRENT SITUATION:
+- System: [current system description]
+- Scale: [user count, traffic, data volume]
+- Tech Stack: [current technologies]
+- Team Size: [number of engineers, experience levels]
+- Timeline: [project deadlines, constraints]
+- Budget: [cost constraints, operational budget]
+
+PROBLEM STATEMENT:
+[Detailed description of the problem including symptoms, impact on users/business, and why current solution isn't working]
+
+BUSINESS CONSTRAINTS:
+- Performance requirements: [specific SLAs, response times, throughput needs]
+- Availability requirements: [uptime SLAs, maintenance windows]
+- Security/Compliance: [specific requirements like SOC2, GDPR, HIPAA]
+- Scalability targets: [growth projections, peak load scenarios]
+- Integration requirements: [existing systems that must integrate]
+
+TECHNICAL CONSTRAINTS:
+- Cannot change: [systems, databases, protocols that are immutable]
+- Must maintain: [backwards compatibility, data integrity, existing APIs]
+- Team expertise: [technologies the team knows vs doesn't know]
+- Infrastructure: [cloud provider, on-prem constraints, networking]
+
+Please analyze this situation and provide:
+
+1. PROBLEM ANALYSIS: Break down the root causes and identify what type of architectural problem this is (scalability, complexity, performance, maintainability, etc.)
+
+2. SOLUTION OPTIONS: Present 3 different architectural approaches, each with:
+   - High-level design approach
+   - Key technology choices and why
+   - Implementation complexity (1-10 scale)
+   - Estimated timeline and team requirements
+   - Risk assessment and mitigation strategies
+   - Long-term maintenance implications
+   - Rough cost analysis (development + operational)
+
+3. RECOMMENDATION: Your top choice with detailed reasoning covering:
+   - Why this approach best fits the constraints
+   - Migration/implementation strategy
+   - Success metrics and monitoring approach
+   - Potential failure points and contingency plans
+
+4. DECISION FRAMEWORK: Questions I should ask stakeholders to validate this approach
+
+Do not start implementing until I've reviewed and approved the architectural direction.
