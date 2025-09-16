@@ -1,0 +1,66 @@
+I need to modernize [legacy system description] while maintaining business continuity. This requires the careful approach of someone who has successfully migrated multiple legacy systems.
+
+LEGACY SYSTEM ANALYSIS:
+- Current System: [technology stack, architecture, age, complexity]
+- Business Criticality: [revenue impact, user count, SLA requirements]
+- Technical Debt: [specific pain points, maintenance burden, known issues]
+- Documentation State: [what exists, what's missing, tribal knowledge]
+- Team Knowledge: [who understands the system, knowledge transfer risks]
+
+MODERNIZATION DRIVERS:
+- Primary motivation: [cost, performance, maintainability, security, compliance]
+- Business timeline: [external deadlines, seasonal constraints]
+- Risk tolerance: [acceptable downtime, rollback requirements]
+- Success criteria: [specific measurable improvements needed]
+
+CONSTRAINTS AND REQUIREMENTS:
+- Data: [volume, migration complexity, integrity requirements]
+- Integrations: [other systems, APIs, file feeds that depend on this]
+- Compliance: [audit trails, regulatory requirements during transition]
+- Team: [available resources, skill mix, training needs]
+- Budget: [development costs, infrastructure, external resources]
+
+TARGET VISION:
+- Desired end state: [new technology stack, architecture, capabilities]
+- Non-negotiable requirements: [must-have features, performance targets]
+- Nice-to-have improvements: [features that add value but aren't critical]
+
+Please design a comprehensive modernization strategy:
+
+1. MIGRATION STRATEGY ANALYSIS:
+   Compare these approaches for this specific situation:
+   - Strangler Fig Pattern (gradual replacement)
+   - Big Bang Migration (complete rewrite)
+   - Hybrid Approach (lift-and-shift then modernize)
+   - Event-Driven Migration (via event streaming)
+   
+   For each approach, analyze: risk level, timeline, resource requirements, business disruption, technical complexity.
+
+2. RECOMMENDED APPROACH with detailed reasoning:
+   - Phase breakdown with clear milestones
+   - Parallel operation strategy (how old and new systems coexist)
+   - Data synchronization strategy during transition
+   - Feature parity validation approach
+   - Performance benchmarking and comparison plan
+
+3. RISK MITIGATION STRATEGY:
+   - Technical risks and mitigation plans
+   - Business continuity plan during migration
+   - Rollback strategy for each phase
+   - Communication plan for stakeholders
+   - Contingency resource planning
+
+4. IMPLEMENTATION ROADMAP:
+   - Detailed timeline with dependencies
+   - Team scaling plan and skill development
+   - Infrastructure provisioning and testing
+   - Third-party vendor coordination if needed
+   - Go-live criteria and success validation
+
+5. KNOWLEDGE TRANSFER AND DOCUMENTATION:
+   - Legacy system documentation recovery plan
+   - Knowledge extraction from key personnel
+   - New system documentation strategy
+   - Team training and onboarding plan
+
+Focus on minimizing business risk while achieving modernization goals.
