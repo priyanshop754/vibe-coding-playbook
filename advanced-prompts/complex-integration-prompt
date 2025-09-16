@@ -1,0 +1,66 @@
+I need to design an integration between [System A] and [System B] that handles [business use case]. This is a complex integration that needs enterprise-grade reliability and maintainability.
+
+INTEGRATION CONTEXT:
+- System A: [technology, data format, API capabilities, limitations, SLA]
+- System B: [technology, data format, API capabilities, limitations, SLA]
+- Business Process: [detailed workflow this integration enables]
+- Data Volume: [records per day/hour, peak loads, seasonal variations]
+- Latency Requirements: [real-time, near real-time, batch acceptable]
+
+TECHNICAL CONSTRAINTS:
+- System A Constraints: [API rate limits, authentication, data format limitations]
+- System B Constraints: [API rate limits, authentication, data format limitations]
+- Network: [bandwidth, security zones, firewall rules, latency]
+- Infrastructure: [available platforms, deployment constraints]
+- Compliance: [data residency, encryption, audit trail requirements]
+
+RELIABILITY REQUIREMENTS:
+- Availability SLA: [uptime requirements, acceptable downtime windows]
+- Data Consistency: [eventual consistency acceptable or need strong consistency]
+- Error Handling: [how to handle partial failures, data conflicts]
+- Recovery: [RTO/RPO requirements, backup strategies]
+
+Please design a comprehensive integration solution:
+
+1. INTEGRATION ARCHITECTURE:
+   - Overall pattern (point-to-point, hub-and-spoke, event-driven, API gateway)
+   - Data flow design with clear transformation points
+   - Error handling and retry logic
+   - State management and transaction boundaries
+   - Monitoring and observability strategy
+
+2. DATA STRATEGY:
+   - Data mapping and transformation approach
+   - Schema evolution and versioning strategy
+   - Data validation and quality checks
+   - Conflict resolution for concurrent updates
+   - Data archiving and retention policies
+
+3. RELIABILITY IMPLEMENTATION:
+   - Circuit breaker and timeout configuration
+   - Queue/buffer management for load leveling
+   - Dead letter queue and poison message handling
+   - Idempotency and duplicate detection
+   - Graceful degradation when dependencies fail
+
+4. OPERATIONAL CONSIDERATIONS:
+   - Deployment and rollout strategy
+   - Configuration management
+   - Monitoring, alerting, and SLA tracking
+   - Troubleshooting and debugging approach
+   - Performance testing and capacity planning
+
+5. FAILURE SCENARIOS AND RESPONSES:
+   For each critical failure scenario, define:
+   - Detection mechanism
+   - Automated response
+   - Manual intervention procedures
+   - Business impact and communication plan
+
+6. EVOLUTION STRATEGY:
+   - How to handle API changes in source systems
+   - Scaling approach as data volume grows
+   - Adding new systems to the integration pattern
+   - Migration path for integration platform changes
+
+Design for production-grade reliability from day one.
