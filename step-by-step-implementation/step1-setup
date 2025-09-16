@@ -1,0 +1,53 @@
+SETUP: Create an AI-optimized development environment for [project name] using [tech stack]
+
+I need you to set up a complete development environment that maximizes AI code generation quality and provides immediate feedback loops to prevent errors from compounding.
+
+CURRENT PROJECT CONTEXT:
+- Project type: [web app/API/mobile app/etc.]
+- Tech stack: [specific frameworks, languages, tools]
+- Team size: [number of developers]
+- Existing codebase: [new project/existing project with X lines of code]
+
+REQUIREMENTS FOR AI OPTIMIZATION:
+
+1. IMMEDIATE FEEDBACK SYSTEMS:
+   - Configure TypeScript with strictest possible settings
+   - Set up ESLint with comprehensive rules that catch AI common mistakes
+   - Configure Prettier for consistent code formatting
+   - Set up pre-commit hooks that run type checking and linting
+   - Configure IDE/editor for real-time error highlighting
+
+2. AI BEHAVIOR GUIDELINES:
+   - Create .cursor/rules file with explicit development standards
+   - Include patterns for error handling, TypeScript usage, testing approaches
+   - Define code review criteria and quality gates
+   - Specify architectural patterns AI should follow
+
+3. CONTEXT MANAGEMENT:
+   - Set up project structure that makes patterns discoverable
+   - Create example implementations for AI to reference
+   - Configure file organization that groups related functionality
+   - Set up documentation structure for architectural decisions
+
+4. VERIFICATION AUTOMATION:
+   - Create verification script that runs after AI code generation
+   - Set up automated testing pipeline with high coverage requirements
+   - Configure performance benchmarking for critical paths
+   - Set up security scanning for common vulnerabilities
+
+5. DEVELOPMENT WORKFLOW:
+   - Configure package.json scripts for common AI verification tasks
+   - Set up development server with hot reloading
+   - Configure debugging tools and logging
+   - Set up deployment pipeline with staging environment
+
+Please provide:
+
+1. COMPLETE SETUP SCRIPT: Single script that configures entire environment
+2. CONFIGURATION FILES: All config files with optimal settings for AI development
+3. VERIFICATION SYSTEM: Script to validate AI-generated code quality
+4. WORKFLOW DOCUMENTATION: Step-by-step process for AI-assisted development
+
+The goal is an environment where AI generates consistently high-quality code that integrates seamlessly with existing patterns and catches errors immediately rather than in production.
+
+Start with the setup script and core configuration files.
