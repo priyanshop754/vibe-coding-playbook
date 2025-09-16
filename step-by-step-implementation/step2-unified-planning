@@ -1,0 +1,228 @@
+# Universal Planning-First Template
+
+## Core Planning Prompt Structure
+
+```xml
+<planning_request>
+  <objective>
+    PLAN FIRST: Create [feature/system description] that [specific requirements]
+  </objective>
+  
+  <context>
+    <tech_stack>
+      - Framework: [Next.js/React/Vue/Angular]
+      - Language: [TypeScript/JavaScript/Python]
+      - Database: [PostgreSQL/MongoDB/MySQL]
+      - State Management: [Redux/Zustand/Context]
+      - Authentication: [NextAuth/Auth0/Custom]
+      - Styling: [Tailwind/Styled Components/CSS Modules]
+    </tech_stack>
+    
+    <existing_patterns>
+      - API Structure: [REST/GraphQL/tRPC patterns]
+      - Component Architecture: [reference existing components]
+      - Database Schema: [reference existing models]
+      - Error Handling: [reference error patterns]
+      - Testing Strategy: [reference test patterns]
+    </existing_patterns>
+    
+    <performance_requirements>
+      - Response Time: [specific millisecond targets]
+      - Throughput: [requests per second]
+      - Concurrent Users: [maximum expected]
+      - Data Volume: [size and growth expectations]
+    </performance_requirements>
+    
+    <security_considerations>
+      - Authentication: [required authentication levels]
+      - Authorization: [role-based access control needs]
+      - Data Sensitivity: [PII/financial/health data handling]
+      - Compliance: [GDPR/HIPAA/SOX requirements]
+    </security_considerations>
+  </context>
+  
+  <constraints>
+    - Must follow existing [pattern type] in [reference file/component]
+    - Cannot modify [specific files/systems/APIs]
+    - Must handle [specific error cases/edge conditions]
+    - Should integrate with [existing systems/third-party services]
+    - Budget constraints: [infrastructure/time limitations]
+    - Timeline: [delivery deadlines and milestones]
+  </constraints>
+  
+  <requirements>
+    <functional>
+      1. [Specific functional requirement with acceptance criteria]
+      2. [User interaction requirement with UX specifications]
+      3. [Business logic requirement with validation rules]
+      4. [Integration requirement with external systems]
+    </functional>
+    
+    <non_functional>
+      1. [Performance requirement with specific metrics]
+      2. [Scalability requirement with growth projections]
+      3. [Security requirement with compliance standards]
+      4. [Reliability requirement with uptime targets]
+    </non_functional>
+  </requirements>
+  
+  <deliverables>
+    Please create a comprehensive technical specification including:
+    - System architecture diagram with component interactions
+    - API interface definitions with request/response schemas
+    - Database schema changes with migration strategies
+    - Security implementation details with threat modeling
+    - Error handling strategy with user experience considerations
+    - Testing approach with coverage requirements
+    - Performance optimization strategy with monitoring plan
+    - Deployment considerations with CI/CD integration
+  </deliverables>
+  
+  <approval_gate>
+    WAIT FOR MY EXPLICIT APPROVAL BEFORE IMPLEMENTING ANY CODE.
+    
+    I will review and approve:
+    - Overall architecture and design decisions
+    - Database schema and migration strategy
+    - API contracts and integration points
+    - Security implementation approach
+    - Testing strategy and coverage plan
+  </approval_gate>
+</planning_request>
+```
+
+## Real-World Planning Examples
+
+### Feature Development Template
+```xml
+<feature_planning>
+  <feature_definition>
+    - Feature Name: User Authentication System
+    - User Story: As a user, I want secure login/logout so that my data is protected
+    - Business Value: Reduces support tickets by 40%, enables personalization
+    - Success Metrics: <2s login time, >99.9% uptime, zero security incidents
+    - Priority: High (blocks other features)
+  </feature_definition>
+  
+  <technical_specification>
+    <data_model>
+      - New Entities: User, Session, RefreshToken
+      - Modified Entities: Existing user profile extension
+      - Relationships: User -> Sessions (1:many), User -> RefreshTokens (1:many)
+      - Validation Rules: Email format, password complexity, session timeout
+      - Migration Strategy: Backfill existing users with secure defaults
+    </data_model>
+    
+    <api_design>
+      - New Endpoints: POST /auth/login, POST /auth/logout, POST /auth/refresh
+      - Request Schemas: LoginRequest, RefreshRequest
+      - Response Schemas: AuthResponse with tokens and user data
+      - Security: Rate limiting, CSRF protection, secure cookies
+      - Versioning: v1 API with backward compatibility plan
+    </api_design>
+    
+    <frontend_architecture>
+      - New Components: LoginForm, AuthProvider, ProtectedRoute
+      - State Management: Auth context with persistent storage
+      - User Flow: Login -> Dashboard with loading states
+      - Responsive: Mobile-first design with touch targets
+      - Accessibility: WCAG 2.1 AA compliance with screen readers
+    </frontend_architecture>
+  </technical_specification>
+  
+  <implementation_phases>
+    <phase_1 name="Foundation" duration="2 days">
+      - Database schema and migrations
+      - Core authentication API endpoints
+      - Basic JWT token handling
+      - Unit tests for auth logic
+    </phase_1>
+    
+    <phase_2 name="Frontend Integration" duration="2 days">
+      - Login/logout UI components
+      - Auth state management
+      - Protected route implementation
+      - Integration tests
+    </phase_2>
+    
+    <phase_3 name="Security Hardening" duration="1 day">
+      - Rate limiting implementation
+      - Security header configuration
+      - Vulnerability scanning
+      - Load testing
+    </phase_3>
+  </implementation_phases>
+</feature_planning>
+```
+
+### Debugging Template
+```xml
+<debugging_analysis>
+  <problem_scope>
+    - Issue: API responses intermittently returning 500 errors
+    - Frequency: 15% of requests during peak hours (2PM-4PM EST)
+    - Impact: User frustration, potential data loss, support tickets
+    - Business Cost: $2K/hour in lost revenue
+    - Affected Systems: User dashboard, payment processing, reports
+  </problem_scope>
+  
+  <investigation_strategy>
+    <hypothesis_ranking>
+      1. Database connection pool exhaustion (70% likelihood)
+         - Evidence: Correlation with peak traffic
+         - Investigation: Check connection pool metrics
+      
+      2. Memory leak in application server (20% likelihood)
+         - Evidence: Gradual performance degradation
+         - Investigation: Memory profiling over 24-hour period
+      
+      3. External API dependency timeout (10% likelihood)
+         - Evidence: Some errors mention third-party services
+         - Investigation: Review external API response times
+    </hypothesis_ranking>
+    
+    <investigation_plan>
+      - Immediate: Enable detailed error logging with request IDs
+      - Short-term: Deploy monitoring dashboard for real-time metrics
+      - Root cause: Systematic testing of each hypothesis
+      - Timeline: 4 hours for identification, 8 hours for fix
+    </investigation_plan>
+  </investigation_strategy>
+  
+  <solution_approach>
+    <immediate_mitigation>
+      - Implement circuit breaker for external APIs
+      - Add request queuing with overflow handling
+      - Deploy emergency rollback capability
+    </immediate_mitigation>
+    
+    <permanent_solution>
+      - Optimize database queries and connection pooling
+      - Implement caching layer for frequent requests
+      - Add comprehensive monitoring and alerting
+    </permanent_solution>
+  </solution_approach>
+</debugging_analysis>
+```
+
+## Planning Validation Framework
+
+### Pre-Implementation Checklist
+- [ ] Technical approach aligns with established architectural patterns
+- [ ] All business requirements addressed with measurable acceptance criteria
+- [ ] Performance and scalability considerations explicitly planned
+- [ ] Security implications thoroughly analyzed with threat modeling
+- [ ] Error handling strategy covers both expected and edge cases
+- [ ] Testing strategy includes unit, integration, and end-to-end coverage
+- [ ] Implementation phases are logical and manageable
+- [ ] Risk mitigation strategies address identified technical challenges
+- [ ] Resource requirements are realistic and available
+- [ ] Timeline accounts for complexity, dependencies, and testing
+
+### Approval Gate Questions
+1. **Architecture**: Does this solution fit our long-term technical strategy?
+2. **Scalability**: How will this perform under 10x current load?
+3. **Security**: What are the potential attack vectors and mitigations?
+4. **Maintainability**: Can our team effectively support this long-term?
+5. **Integration**: How does this impact existing systems and workflows?
+
