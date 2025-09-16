@@ -1,0 +1,66 @@
+I need to scale [system/application] to handle [target scale] while maintaining [performance/reliability requirements]. This requires systematic capacity planning and architectural evolution.
+
+CURRENT STATE:
+- System Architecture: [current design, bottlenecks, scaling limitations]
+- Performance Metrics: [current throughput, response times, resource usage]
+- Infrastructure: [servers, databases, caches, CDN, monitoring tools]
+- Cost Structure: [current operational costs, cost per user/transaction]
+- Team Capabilities: [ops expertise, on-call capacity, automation maturity]
+
+SCALING TARGETS:
+- Growth Timeline: [when you need to reach target scale, growth curve]
+- Target Metrics: [users, requests/second, data volume, geographic distribution]
+- Performance Requirements: [SLA targets at scale, acceptable degradation]
+- Cost Constraints: [budget limits, cost-per-user targets, ROI requirements]
+- Reliability Targets: [uptime SLA, disaster recovery, multi-region requirements]
+
+SCALING CHALLENGES:
+- Known Bottlenecks: [current system limitations, resource constraints]
+- Data Challenges: [database scaling, data consistency, backup/recovery at scale]
+- Operational Challenges: [monitoring, debugging, deployment at scale]
+- Team Scaling: [hiring needs, knowledge distribution, on-call sustainability]
+
+Please develop a comprehensive scaling strategy:
+
+1. BOTTLENECK ANALYSIS:
+   - Identify current and projected bottlenecks in order of impact
+   - Quantify the scaling limits of each system component
+   - Determine which bottlenecks are architectural vs operational
+   - Prioritize bottlenecks by timeline and business impact
+
+2. SCALING ARCHITECTURE:
+   - Horizontal vs vertical scaling strategy for each component
+   - Database scaling approach (sharding, read replicas, caching strategy)
+   - Microservices decomposition if beneficial
+   - CDN and edge computing strategy
+   - Auto-scaling configuration and resource management
+
+3. INFRASTRUCTURE EVOLUTION:
+   - Cloud strategy and multi-region deployment
+   - Container orchestration and service mesh considerations
+   - Load balancing and traffic management
+   - Storage scaling and data archiving strategy
+   - Network capacity and bandwidth planning
+
+4. OPERATIONAL SCALING:
+   - Monitoring and observability at scale
+   - Automated incident response and self-healing
+   - Deployment automation and canary release processes
+   - Capacity planning and cost optimization
+   - Team structure and on-call rotation planning
+
+5. IMPLEMENTATION ROADMAP:
+   - Phased approach with clear milestones and success criteria
+   - Load testing and validation strategy for each phase
+   - Risk assessment and rollback plans
+   - Investment timeline and resource requirements
+   - Success metrics and monitoring dashboards
+
+6. COST OPTIMIZATION:
+   - Cost modeling at target scale
+   - Resource optimization opportunities
+   - Reserved capacity vs on-demand strategy
+   - Cost monitoring and alerting
+   - ROI validation and business case updates
+
+Design for sustainable growth that maintains system reliability and team sanity.
