@@ -1,0 +1,28 @@
+<multi_agent_workflow>
+  <agent_1 role="system_architect">
+    <responsibility>High-level system design and component boundaries</responsibility>
+    <input>Business requirements and technical constraints</input>
+    <output>System architecture, API contracts, data flow diagrams</output>
+    <specialization>Scalability, performance, security architecture</specialization>
+  </agent_1>
+  
+  <agent_2 role="backend_engineer">
+    <responsibility>API implementation and data layer design</responsibility>
+    <input>Architecture specifications from agent_1</input>
+    <output>Database schemas, API endpoints, business logic implementation</output>
+    <specialization>Database optimization, API security, error handling</specialization>
+  </agent_2>
+  
+  <agent_3 role="frontend_engineer">
+    <responsibility>User interface and interaction design</responsibility>
+    <input>API contracts from agent_2</input>
+    <output>React components, state management, user experience flows</output>
+    <specialization>Component architecture, accessibility, responsive design</specialization>
+  </agent_3>
+  
+  <coordination_protocol>
+    Each agent validates output against previous agent deliverables before proceeding.
+    All agents must align on shared interfaces and contracts.
+    Quality gates ensure consistency across all implementation layers.
+  </coordination_protocol>
+</multi_agent_workflow>
