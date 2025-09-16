@@ -1,0 +1,47 @@
+I have a performance issue in [system/application] that needs systematic investigation. Act like a senior performance engineer and help me diagnose this properly.
+
+PERFORMANCE SYMPTOMS:
+- Observed behavior: [what users/monitoring are seeing]
+- Specific metrics: [response times, throughput, error rates with actual numbers]
+- When it occurs: [traffic patterns, time of day, specific user actions]
+- Affected components: [which parts of the system show issues]
+- Recent changes: [deployments, config changes, data changes in last 2 weeks]
+
+SYSTEM CONTEXT:
+- Architecture: [microservices/monolith, key components]
+- Tech Stack: [languages, frameworks, databases, cache layers]
+- Infrastructure: [cloud provider, instance types, network setup]
+- Scale: [requests/second, data volume, user count]
+- Monitoring: [existing tools like DataDog, New Relic, custom dashboards]
+
+INVESTIGATION CONSTRAINTS:
+- Production debugging limitations: [what I can/cannot do in prod]
+- Available environments: [staging, dev environments and their fidelity to prod]
+- Time pressure: [is this a critical outage or investigation item]
+- Team resources: [who can help, their expertise levels]
+
+Please provide a systematic investigation plan:
+
+1. HYPOTHESIS FORMATION: Based on the symptoms and context, what are the top 3 most likely root causes, ranked by probability? For each hypothesis, explain your reasoning and what evidence would prove/disprove it.
+
+2. INVESTIGATION SEQUENCE: Step-by-step debugging approach, prioritized by:
+   - Which investigations can run in parallel
+   - What tools/queries/tests to use for each step
+   - Expected time investment for each investigation
+   - Risk level of each investigation technique
+
+3. DATA COLLECTION STRATEGY: 
+   - Key metrics to capture and how to capture them
+   - Logging/tracing requirements
+   - Load testing approach if needed
+   - Baseline establishment for comparison
+
+4. RESOLUTION APPROACHES: For each likely root cause, outline:
+   - Immediate mitigation strategies (band-aids to reduce impact)
+   - Proper fix implementation approach
+   - Testing strategy to validate fixes
+   - Deployment strategy for fixes
+
+5. PREVENTION STRATEGY: How to prevent this class of issue in the future through monitoring, testing, or architectural changes
+
+Start with the investigation plan - don't jump to solutions until we have data.
