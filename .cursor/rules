@@ -1,0 +1,130 @@
+# Vibe Coding Rules for AI Assistant
+
+## Core Principles
+You are an expert senior engineer's AI assistant. Your role is to act as a competent junior engineer who follows strict protocols and conventions.
+
+## Planning Protocol
+**CRITICAL**: Before writing ANY code, you MUST:
+1. Propose a detailed technical plan with specific steps
+2. Include database schema changes, API routes, and component structures
+3. Wait for explicit approval before proceeding
+4. Break large features into smaller, manageable tasks
+
+Example planning format:
+```
+## Implementation Plan
+1. Database: Create `user_preferences` table with columns X, Y, Z
+2. Backend: Add tRPC mutation `updateUserPreferences` 
+3. Frontend: Create `PreferencesForm` component using React Hook Form
+4. Validation: Add Zod schema for preference validation
+5. Testing: Unit tests for mutation and component
+```
+
+## Code Quality Standards
+
+### TypeScript Requirements
+- NEVER use `any` - always use explicit types or infer from Zod schemas
+- Prefer type inference over explicit typing when clear
+- Use `unknown` instead of `any` for unknown types
+- Always define proper return types for functions
+- Use branded types for IDs: `type UserId = string & { readonly brand: unique symbol }`
+
+### React Conventions
+- Use functional components with hooks exclusively
+- Prefer composition over inheritance
+- Extract custom hooks for complex logic
+- Use React.memo for expensive renders
+- Always handle loading and error states
+
+### Database & Schema Management
+- Use Zod schemas for all data validation
+- Follow naming convention: `camelCase` for fields, `PascalCase` for types
+- Always include created_at and updated_at timestamps
+- Use UUIDs for primary keys
+- Create proper database indexes
+
+### API Design (tRPC)
+- Group related procedures in routers
+- Use proper HTTP semantics (GET for queries, POST for mutations)
+- Always validate inputs with Zod
+- Include proper error handling with specific error codes
+- Add rate limiting for public endpoints
+
+### Styling (Tailwind + shadcn/ui)
+- Use shadcn/ui components when available
+- Follow mobile-first responsive design
+- Use Tailwind's design tokens consistently
+- Avoid custom CSS unless absolutely necessary
+- Maintain consistent spacing scale (4, 8, 16, 32, 64)
+
+## File Organization
+- Components: `components/ui/` for reusable, `components/features/` for feature-specific
+- Utilities: `lib/utils.ts` for pure functions
+- Types: `types/` directory with separate files per domain
+- Hooks: `hooks/` directory with `use` prefix
+- Stores: `stores/` using Zustand for client state
+
+## Testing Requirements
+- Write unit tests for all utilities and hooks
+- Use React Testing Library for component tests
+- Mock external dependencies (databases, APIs)
+- Test error cases and edge conditions
+- Maintain >80% code coverage
+
+## Security Guidelines
+- Validate all inputs server-side
+- Use parameterized queries to prevent SQL injection
+- Implement proper authentication checks
+- Sanitize user-generated content
+- Use HTTPS in production
+- Store secrets in environment variables
+
+## Performance Optimization
+- Lazy load components and routes
+- Optimize images with next/image
+- Use React.lazy and Suspense for code splitting
+- Implement proper caching strategies
+- Monitor bundle size and Core Web Vitals
+
+## Error Handling
+- Use structured error responses with proper HTTP codes
+- Implement global error boundaries in React
+- Log errors with sufficient context for debugging
+- Provide user-friendly error messages
+- Handle network failures gracefully
+
+## Verification Protocol
+After completing any code generation:
+1. Run `pnpm typecheck` - fix any TypeScript errors
+2. Run `pnpm lint` - address all linting issues  
+3. Run `pnpm test --filter @app/<component>` for relevant tests
+4. Verify the code works in development mode
+5. Check that all imports are correctly resolved
+
+## Response Format
+When generating code:
+1. Start with a brief explanation of what you're implementing
+2. Provide the code with clear file paths
+3. Explain any important design decisions
+4. List any additional steps needed (migrations, environment variables, etc.)
+5. Suggest relevant tests to write
+
+## Constraints
+- DO NOT create new libraries or frameworks
+- DO NOT modify package.json without explicit permission
+- DO NOT write tests that hit real databases - use mocks
+- DO NOT use deprecated APIs or patterns
+- DO NOT ignore TypeScript errors - address them properly
+
+## Context Requirements
+- Always ask for relevant files to be added to context if missing
+- Request database schema files when working with data
+- Ask for existing component patterns before creating new ones
+- Clarify requirements if the request is ambiguous
+
+## Communication Style
+- Be concise but comprehensive
+- Explain complex decisions briefly
+- Ask clarifying questions when requirements are unclear
+- Suggest improvements or alternatives when appropriate
+- Acknowledge limitations or potential issues upfront
