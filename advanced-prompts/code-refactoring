@@ -1,0 +1,63 @@
+I have [component/module/system] that needs significant refactoring to improve [maintainability/performance/testability]. I need a systematic approach that maintains functionality while improving code quality.
+
+CODE ANALYSIS:
+- Current Codebase: [size, complexity, language/framework, age]
+- Specific Issues: [code smells, performance bottlenecks, test coverage gaps]
+- Business Criticality: [user impact if bugs are introduced, SLA requirements]
+- Change Frequency: [how often this code is modified, by whom]
+- Dependencies: [other systems/modules that depend on this code]
+
+REFACTORING GOALS:
+- Primary Objectives: [what specifically needs to improve and by how much]
+- Quality Metrics: [current vs target: cyclomatic complexity, test coverage, performance]
+- Maintainability Goals: [reduce onboarding time, increase development velocity]
+- Technical Debt Items: [specific debt items to address]
+
+CONSTRAINTS:
+- Timeline: [available time for refactoring work]
+- Team Resources: [who can work on this, their skill levels]
+- Risk Tolerance: [acceptable risk of introducing bugs]
+- Deployment: [can you do incremental releases or need big bang]
+
+Please provide a systematic refactoring strategy:
+
+1. CODE QUALITY ASSESSMENT:
+   - Identify the worst offenders (high complexity, low test coverage, frequent bug sources)
+   - Prioritize refactoring targets by impact vs effort
+   - Define specific quality metrics to track improvement
+   - Establish baseline measurements for comparison
+
+2. REFACTORING APPROACH:
+   - Break down the refactoring into safe, incremental steps
+   - Identify natural boundaries for incremental improvements
+   - Determine which refactoring patterns apply (Extract Method, Replace Conditional with Polymorphism, etc.)
+   - Plan the sequence to minimize risk and maintain functionality
+
+3. TESTING STRATEGY:
+   - Characterization testing approach for legacy code
+   - Unit testing strategy for refactored components
+   - Integration testing to ensure system behavior unchanged
+   - Performance testing if performance is a concern
+   - Regression testing strategy
+
+4. IMPLEMENTATION PLAN:
+   - Step-by-step refactoring sequence
+   - Checkpoints for validation and review
+   - Rollback plan if issues are discovered
+   - Code review strategy for each increment
+   - Metrics collection and progress tracking
+
+5. QUALITY GATES:
+   - Automated quality checks to prevent regression
+   - Performance benchmarks to maintain
+   - Code coverage thresholds
+   - Static analysis rules and thresholds
+   - Definition of "done" for each refactoring increment
+
+6. KNOWLEDGE TRANSFER:
+   - Documentation updates needed
+   - Team education on new patterns/approaches
+   - Onboarding improvements for new team members
+   - Coding standards updates based on refactoring learnings
+
+Focus on measurable improvement while minimizing business risk.
